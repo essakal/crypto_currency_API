@@ -50,7 +50,7 @@ tr {
     /* width: 100px; */
 }
 tr:hover {
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(245, 245, 245);
     cursor: pointer;
 }
 td:nth-child(1) {
@@ -111,4 +111,16 @@ td:nth-child(10) {
 .s {
     color: #5e5e5e;
     font-weight: 100;
+}
+
+
+.load {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #16c784; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #16c784;
+    text-transform: uppercase;
 }

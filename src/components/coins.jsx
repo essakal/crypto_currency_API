@@ -19,10 +19,8 @@ export default function Coins() {
 
     return (
         <div>
-            {!coins && <h1>loading...</h1>}
-
-            {/* {coins && coins.map(item => ( */}
-            {coins && coins.map(item => (
+            {!coins ? <h1 className='load'>just a moment...</h1>
+                :
                 <table>
                     <thead>
                         <th>#</th>
@@ -37,9 +35,7 @@ export default function Coins() {
                         <th>Market Cap</th>
                         <th>Circulating Supply</th>
                     </thead>
-                    <tbody>
-                    {/* coins.map(item => ( */}
-                        {/* {coins && coins.map(item => ( */}
+                    {coins.map(item => (
                         <tr key={item.id}>
                             <td>{item.rank}</td>
                             {/* <td><img src={`https://cryptoicons.org/api/icon/${(item.symbol).toLowerCase()}/16`} alt="" /></td> */}
@@ -94,10 +90,11 @@ export default function Coins() {
                             {/* <td>{item.name}</td>
                             <td>{item.quotes.USD.market_cap_change_24h}</td> */}
                         </tr>
+                    ))}
+                </table>
+            }
 
-                    </tbody>
-                </table >
-            ))}
+
         </div >
     )
 }
